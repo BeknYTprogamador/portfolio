@@ -170,11 +170,4 @@ The social preview (`assets/og-card.png`) is rendered from
 that file, open it in a browser at 1200 × 630, and capture the viewport as a
 PNG. Keep the source file so the card stays easy to revise.
 
-## Suggested next additions
 
-- A downloadable one-page CV (PDF) linked in the header and contact section.
-- A Portuguese version at `/pt/` if you want to target the Lisbon market.
-- Two or three more full bug reports, ideally from one consistent product so
-  recruiters can see a complete test pass.
-- A short "currently testing" note with the date, which keeps the site feeling
-  active.
