@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinícius Cardoso — Manual QA Tester</title>
+  <meta
+    name="description"
+    content="Vinícius Cardoso is a manual QA tester in Lisbon with a builder's background. Functional testing, UI/UX checks, localization, and clear bug reports.">
+  <meta name="theme-color" content="#f7f5ef" id="meta-theme-color">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var theme = "light";
+
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "dark") {
+          theme = saved;
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          theme = "dark";
+        }
+      } catch (error) {
+        theme = "light";
+      }
+
+      root.setAttribute("data-theme", theme);
+      root.style.colorScheme = theme;
+
+      var meta = document.getElementById("meta-theme-color");
+      if (meta) {
+        meta.setAttribute("content", theme === "dark" ? "#0e120f" : "#f7f5ef");
+      }
+    })();
+  </script>
+  <meta name="author" content="Vinícius da Silva Cardoso">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vinícius Cardoso — Manual QA Tester">
+  <meta
+    property="og:description"
+    content="A builder's eye, a tester's habits. Manual QA, UI/UX checks, and bug reports that developers can act on.">
+  <!-- Social crawlers require an absolute URL after deployment. -->
+  <meta property="og:image" content="assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vinícius da Silva Cardoso",
+      "jobTitle": "Manual QA Tester",
+      "description": "Manual QA tester in Lisbon with a background in web and game development. Focused on functional testing, UI/UX checks, localization, and clear bug reports.",
+      "email": "mailto:vp485454@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lisbon",
+        "addressCountry": "PT"
+      },
+      "knowsLanguage": ["pt-PT", "en"],
+      "knowsAbout": [
+        "Manual testing",
+        "Functional testing",
+        "Exploratory testing",
+        "Regression testing",
+        "Usability testing",
+        "Localization testing",
+        "Bug reporting",
+        "Test documentation"
+      ],
+      "sameAs": [
+        "https://github.com/BeknYTprogamador",
+        "https://portfolio-qa-testing.vercel.app/",
+        "https://www.instagram.com/bekn_yt/"
+      ]
+    }
+  </script>
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Vinícius Cardoso — back to top">
+        <span class="brand-mark" aria-hidden="true">VC</span>
+        <span class="brand-text">
+          <span class="brand-name">Vinícius Cardoso</span>
+          <span class="brand-role">Manual QA</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#foundation">Foundation</a></li>
+          <li><a href="#hobby">Hobby</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="header-cta" href="mailto:vp485454@gmail.com">Let&rsquo;s talk</a>
+
+      <button
+        class="theme-toggle"
+        type="button"
+        data-theme-toggle
+        aria-label="Dark theme"
+        aria-pressed="false"
+        title="Switch to dark theme"
+      >
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"></path>
+        </svg>
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      </button>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal>
+            <span class="status-dot" aria-hidden="true"></span>
+            Manual QA &middot; Lisbon, Portugal
+          </p>
+          <h1 id="hero-title" data-reveal style="--delay: 60ms">
+            I test the <em>details</em><br>people scroll past.
+          </h1>
+          <p class="hero-sub" data-reveal style="--delay: 120ms">
+            I&rsquo;m Vinícius &mdash; a manual QA tester with a builder&rsquo;s
+            background. I came from web and game development, and now I use that
+            knowledge to find what breaks, document it clearly, and help teams ship
+            calmer releases.
+          </p>
+          <div class="hero-actions" data-reveal style="--delay: 180ms">
+            <a class="btn btn-primary" href="#work">
+              See my QA work
+              <span class="btn-arrow" aria-hidden="true">&darr;</span>
+            </a>
+            <a class="btn btn-ghost" href="#about">Read my story</a>
+          </div>
+          <p class="hero-note" data-reveal style="--delay: 240ms">
+            <span class="hero-note-dot" aria-hidden="true"></span>
+            Open to junior QA roles, internships, and test collaborations.
+          </p>
+        </div>
+
+        <div class="hero-card-wrap" data-reveal style="--delay: 200ms">
+          <article class="ticket" aria-label="Sample bug report preview">
+            <div class="ticket-bar">
+              <span class="ticket-id">QA-01</span>
+              <span class="ticket-status">
+                <span class="ticket-status-dot" aria-hidden="true"></span>
+                Confirmed
+              </span>
+            </div>
+            <div class="ticket-body">
+              <p class="ticket-kicker">Bug report &middot; Startup Portugal</p>
+              <h2>Language switch drops on search results</h2>
+              <div class="ticket-tags">
+                <span class="chip chip-amber">Medium</span>
+                <span class="chip">Localization</span>
+                <span class="chip">Web</span>
+              </div>
+              <dl class="ticket-meta">
+                <div>
+                  <dt>Steps</dt>
+                  <dd>Set site to PT &rarr; search &ldquo;idade&rdquo;</dd>
+                </div>
+                <div>
+                  <dt>Expected</dt>
+                  <dd>Results stay in Portuguese</dd>
+                </div>
+                <div>
+                  <dt>Actual</dt>
+                  <dd>Results header reverts to English</dd>
+                </div>
+              </dl>
+              <a class="ticket-link" href="#sample">
+                Read the full report
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+          <p class="ticket-caption">A real finding from self-directed testing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick facts -->
+    <section class="facts" aria-label="Quick facts">
+      <div class="shell">
+        <ul class="fact-list">
+          <li>
+            <span class="fact-label">Based in</span>
+            <span class="fact-value">Lisbon, Portugal</span>
+          </li>
+          <li>
+            <span class="fact-label">Focus</span>
+            <span class="fact-value">Manual QA &middot; UI/UX &middot; Product</span>
+          </li>
+          <li>
+            <span class="fact-label">Languages</span>
+            <span class="fact-value">Portuguese &middot; English</span>
+          </li>
+          <li>
+            <span class="fact-label">Background</span>
+            <span class="fact-value">Web &amp; game development</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Selected QA work -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="section-index">01 &mdash; Selected work</p>
+          <h2 id="work-title">Testing real products. Documenting what matters.</h2>
+          <p class="section-lead">
+            Self-directed QA on real, public-facing products &mdash; written up the
+            way I&rsquo;d want to receive it as a developer. One project, documented
+            properly, with two full reports below.
+          </p>
+        </div>
+
+        <div class="project-grid project-grid--single">
+          <!-- QA portfolio -->
+          <article class="project-card project-card--featured" data-reveal>
+            <a
+              class="project-media project-media--qa"
+              href="https://portfolio-qa-testing.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit the Manual QA portfolio (opens in a new tab)"
+            >
+              <div class="browser-mock" aria-hidden="true">
+                <div class="browser-bar">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-url">portfolio-qa-testing.vercel.app</span>
+                </div>
+                <div class="browser-body">
+                  <div class="mock-heading">
+                    <span>Bug reports</span>
+                    <span class="mock-count">03 shown</span>
+                  </div>
+                  <div class="bug-row">
+                    <span class="bug-dot bug-dot--red" aria-hidden="true"></span>
+                    <span>Language switch drops on search</span>
+                    <span class="bug-sev bug-sev--med">MED</span>
+                  </div>
+                  <div class="bug-row">
+                    <span class="bug-dot bug-dot--amber" aria-hidden="true"></span>
+                    <span>Search misses query intent</span>
+                    <span class="bug-sev bug-sev--med">MED</span>
+                  </div>
+                  <div class="bug-row">
+                    <span class="bug-dot bug-dot--green" aria-hidden="true"></span>
+                    <span>Media keeps playing on close</span>
+                    <span class="bug-sev bug-sev--high">HIGH</span>
+                  </div>
+                  <div class="mock-foot">
+                    <span>Steps &middot; Expected &middot; Actual &middot; Severity</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="project-body">
+              <div class="project-top">
+                <span class="project-kicker">Self-directed QA &middot; 2026</span>
+              </div>
+              <h3>Manual QA Portfolio</h3>
+              <p>
+                A hands-on portfolio built from testing public websites across
+                functional flows, search, localization, and responsive layouts. Each
+                finding is written as a reproducible report: steps, expected vs.
+                actual, severity, and context.
+              </p>
+              <ul class="tag-list" aria-label="Focus areas">
+                <li>Functional testing</li>
+                <li>Localization</li>
+                <li>Search relevance</li>
+                <li>Responsive UI</li>
+              </ul>
+              <dl class="project-meta">
+                <div>
+                  <dt>Role</dt>
+                  <dd>Tester &amp; documentation</dd>
+                </div>
+                <div>
+                  <dt>Output</dt>
+                  <dd>Bug reports, test cases, checklists</dd>
+                </div>
+              </dl>
+              <a
+                class="text-link"
+                href="https://portfolio-qa-testing.vercel.app/"
+                target="_blank"
+                rel="noopener"
+              >
+                Visit the QA portfolio
+                <span aria-hidden="true">&nearr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Sample reports -->
+        <div class="reports" id="sample" data-reveal>
+          <div class="reports-head">
+            <div>
+              <p class="section-index">Field notes</p>
+              <h3>What a bug report from me looks like.</h3>
+            </div>
+            <p class="reports-intro">
+              Two examples from self-directed testing of public websites &mdash;
+              clear enough for a developer to reproduce without a follow-up call.
+            </p>
+          </div>
+
+          <details class="report" open>
+            <summary>
+              <span class="report-id">QA-01</span>
+              <span class="report-title">Language switch drops on search results</span>
+              <span class="report-tags">
+                <span class="chip chip-amber">Medium</span>
+                <span class="chip">Localization</span>
+              </span>
+              <span class="report-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="report-content">
+              <dl class="report-meta">
+                <div>
+                  <dt>Project</dt>
+                  <dd>Startup Portugal</dd>
+                </div>
+                <div>
+                  <dt>Environment</dt>
+                  <dd>Web &middot; Chrome desktop</dd>
+                </div>
+                <div>
+                  <dt>Type</dt>
+                  <dd>Localization</dd>
+                </div>
+              </dl>
+              <div class="report-detail">
+                <h4>Steps to reproduce</h4>
+                <ol>
+                  <li>Open the Startup Portugal website.</li>
+                  <li>Switch the site language to Portuguese.</li>
+                  <li>Search for a Portuguese term such as &ldquo;idade&rdquo;.</li>
+                </ol>
+                <div class="result-grid">
+                  <div class="result result--expected">
+                    <h4>Expected</h4>
+                    <p>
+                      The results page and all interface labels remain in
+                      Portuguese.
+                    </p>
+                  </div>
+                  <div class="result result--actual">
+                    <h4>Actual</h4>
+                    <p>
+                      The results header and some labels revert to English:
+                      &ldquo;Search results for: idade&rdquo;.
+                    </p>
+                  </div>
+                </div>
+                <p class="report-impact">
+                  <span>Why it matters</span>
+                  A mixed-language results page makes the product feel unfinished
+                  and weakens trust for Portuguese-speaking users.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <details class="report">
+            <summary>
+              <span class="report-id">QA-02</span>
+              <span class="report-title">Search results miss the intent of the query</span>
+              <span class="report-tags">
+                <span class="chip chip-amber">Medium</span>
+                <span class="chip">Search</span>
+              </span>
+              <span class="report-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="report-content">
+              <dl class="report-meta">
+                <div>
+                  <dt>Project</dt>
+                  <dd>Visit Sintra</dd>
+                </div>
+                <div>
+                  <dt>Environment</dt>
+                  <dd>Web &middot; Mobile &amp; desktop</dd>
+                </div>
+                <div>
+                  <dt>Type</dt>
+                  <dd>Search relevance</dd>
+                </div>
+              </dl>
+              <div class="report-detail">
+                <h4>Steps to reproduce</h4>
+                <ol>
+                  <li>Open the Visit Sintra website with Portuguese selected.</li>
+                  <li>Search for &ldquo;parques&rdquo; (parks).</li>
+                  <li>Review the first page of results.</li>
+                </ol>
+                <div class="result-grid">
+                  <div class="result result--expected">
+                    <h4>Expected</h4>
+                    <p>
+                      Results for parks, gardens, and natural attractions near
+                      Sintra.
+                    </p>
+                  </div>
+                  <div class="result result--actual">
+                    <h4>Actual</h4>
+                    <p>
+                      Unrelated general-information articles appear ahead of
+                      relevant attractions.
+                    </p>
+                  </div>
+                </div>
+                <p class="report-impact">
+                  <span>Why it matters</span>
+                  A visitor looking for a place to visit may leave without finding
+                  it, even though the content exists on the site.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <div class="reports-foot">
+            <p>
+              Practice findings, shared as learning examples &mdash; not paid
+              audits. I report issues responsibly and without publishing anything
+              sensitive.
+            </p>
+            <a
+              class="text-link"
+              href="https://portfolio-qa-testing.vercel.app/"
+              target="_blank"
+              rel="noopener"
+            >
+              See the full QA portfolio
+              <span aria-hidden="true">&nearr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Build foundation -->
+    <section class="section section--foundation" id="foundation" aria-labelledby="foundation-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="section-index">02 &mdash; Build foundation &middot; 2025</p>
+          <h2 id="foundation-title">Before I tested products, I built them.</h2>
+          <p class="section-lead">
+            In 2025 I worked on the interface of a commercial management system
+            &mdash; service orders, inventory, cash flow, finance. Dense, real
+            workflows with no room for vague UI. I&rsquo;m not a full-time developer
+            today, but that year is why I can read a layout, anticipate where it
+            breaks, and describe problems in a developer&rsquo;s language.
+          </p>
+        </div>
+
+        <div class="build-grid build-grid--single">
+          <article class="build-card build-card--featured" data-reveal>
+            <a
+              class="build-media build-media--dshop"
+              href="https://www.dshopsistema.com.br/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit Dshop Pro (opens in a new tab)"
+            >
+              <img
+                src="assets/dshop-pro.webp"
+                alt="Dshop Pro management system preview"
+                width="1920"
+                height="1920"
+                loading="lazy"
+                decoding="async">
+              <span class="build-year">2025</span>
+            </a>
+            <div class="build-body">
+              <p class="project-kicker">Commercial product &middot; Web interface</p>
+              <h3>Dshop Pro &mdash; Standard</h3>
+              <p>
+                Interface work on the Standard version of a management platform for
+                repair shops: service orders, inventory, cash flow, and finance in one
+                system. Real workflows, dense screens, no room for vague UI.
+              </p>
+              <ul class="tag-list" aria-label="Tools and skills">
+                <li>Web interface</li>
+                <li>Product UI</li>
+                <li>Production software</li>
+              </ul>
+              <div class="build-links">
+                <span>View:</span>
+                <a
+                  href="https://www.dshopsistema.com.br/"
+                  target="_blank"
+                  rel="noopener"
+                >Live system <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="toolkit" data-reveal>
+          <p class="toolkit-label">Also in the toolkit</p>
+          <ul class="toolkit-list">
+            <li>React (foundational)</li>
+            <li>Git &amp; GitHub</li>
+            <li>Responsive layouts</li>
+            <li>Browser DevTools</li>
+            <li>Technical documentation</li>
+          </ul>
+          <p class="toolkit-note">
+            Builder context, not an engineering claim. QA is my focus.
+          </p>
+        </div>
+
+        <!-- Hobby projects -->
+        <section class="hobby" id="hobby" aria-labelledby="hobby-title">
+          <div class="section-head" data-reveal>
+            <p class="section-index">03 &mdash; Off the clock</p>
+            <h2 id="hobby-title">The worlds I build when I&rsquo;m not testing.</h2>
+            <p class="section-lead">
+              Personal and collaborative projects. Not client work, and not QA case
+              studies &mdash; just places where I practise structure, bilingual
+              content, and shipping something people can visit.
+            </p>
+          </div>
+
+          <div class="build-grid hobby-grid">
+          <!-- Nexus -->
+          <article class="build-card" data-reveal>
+            <a
+              class="build-media build-media--nexus"
+              href="https://saymon-man.vercel.app/index.html"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit the Nexus: Operação Paralela project (opens in a new tab)"
+            >
+              <span class="nexus-stamp" aria-hidden="true">NXS // DOSSIER_001</span>
+              <img
+                src="assets/nexus-logo.png"
+                alt=""
+                width="300"
+                height="282"
+                loading="lazy"
+                decoding="async">
+              <span class="nexus-tag" aria-hidden="true">PT-BR &middot; Worldbuilding</span>
+            </a>
+            <div class="build-body">
+              <p class="project-kicker">Worldbuilding archive &middot; 2026</p>
+              <h3>Nexus: Opera&ccedil;&atilde;o Paralela</h3>
+              <p>
+                A large Portuguese-language worldbuilding site: factions, dossiers,
+                and a dense lore library. I built the structure and navigation so the
+                universe stays readable as it grows.
+              </p>
+              <ul class="tag-list" aria-label="Focus areas">
+                <li>Worldbuilding</li>
+                <li>Information architecture</li>
+                <li>Content</li>
+                <li>PT-BR</li>
+              </ul>
+              <div class="build-links">
+                <span>View:</span>
+                <a
+                  href="https://saymon-man.vercel.app/index.html"
+                  target="_blank"
+                  rel="noopener"
+                >Enter Nexus <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Battle of the Raven -->
+          <article class="build-card" data-reveal style="--delay: 80ms">
+            <a
+              class="build-media"
+              href="https://battleraven.netlify.app/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit the English Battle of the Raven site (opens in a new tab)"
+            >
+              <img
+                src="assets/battle-of-the-raven.jpg"
+                alt="Battle of the Raven game project preview"
+                width="924"
+                height="705"
+                loading="lazy"
+                decoding="async">
+              <span class="build-year">2025</span>
+            </a>
+            <div class="build-body">
+              <p class="project-kicker">Bilingual RPG &middot; Collaborative project</p>
+              <h3>Battle of the Raven</h3>
+              <p>
+                A collaborative RPG project with separate Portuguese and English web
+                presences. I built both sites and handled the PT-BR/EN split, from
+                copy structure to the final pages.
+              </p>
+              <ul class="tag-list" aria-label="Tools and skills">
+                <li>HTML &amp; CSS</li>
+                <li>JavaScript</li>
+                <li>RPG Maker MZ</li>
+                <li>Localization</li>
+              </ul>
+              <div class="build-links">
+                <span>View:</span>
+                <a
+                  href="https://batalhadocorvo.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                >PT-BR <span aria-hidden="true">&nearr;</span></a>
+                <a
+                  href="https://battleraven.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                >English <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+          </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="shell about-grid">
+        <div class="about-copy" data-reveal>
+          <p class="section-index">04 &mdash; About</p>
+          <h2 id="about-title">A builder&rsquo;s eye. A tester&rsquo;s habits.</h2>
+          <p class="about-lead">
+            I&rsquo;m Vinícius da Silva Cardoso, a 16-year-old manual QA tester based
+            in Lisbon.
+          </p>
+          <p>
+            I started with code &mdash; HTML, CSS, JavaScript, React, and RPG Maker MZ
+            &mdash; and shipped a bilingual game site plus interface work for a
+            commercial management system. Building those projects taught me how much
+            can go wrong between a design file and a real browser.
+          </p>
+          <p>
+            Somewhere in that process, I noticed what I actually enjoyed most: opening
+            a product, following a user flow, and finding the moment it stops making
+            sense. That led me to manual QA &mdash; functional testing, UI and
+            responsive checks, localization, and bug reports that tell a developer
+            exactly where to look.
+          </p>
+          <p>
+            I&rsquo;m early in this career and honest about it. I&rsquo;m not a
+            full-time engineer, and I&rsquo;m not pretending to be a senior tester.
+            What I bring is a builder&rsquo;s understanding of the web, a
+            product-minded eye for friction, and documentation habits that respect the
+            reader&rsquo;s time. I&rsquo;m looking for a junior QA role or
+            collaboration where I can keep learning and add real value from day one.
+          </p>
+          <blockquote class="about-quote">
+            <p>
+              A good bug report doesn&rsquo;t just say something is broken. It shows
+              how, where, and why it matters.
+            </p>
+          </blockquote>
+        </div>
+
+        <div class="about-aside" data-reveal style="--delay: 100ms">
+          <div class="glance">
+            <p class="glance-title">At a glance</p>
+            <dl class="glance-list">
+              <div>
+                <dt>Based in</dt>
+                <dd>Lisbon, Portugal</dd>
+              </div>
+              <div>
+                <dt>Age</dt>
+                <dd>16 &middot; early-career</dd>
+              </div>
+              <div>
+                <dt>Languages</dt>
+                <dd>Portuguese (native) &middot; English (working)</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Manual QA &middot; UI/UX &middot; Product</dd>
+              </div>
+              <div>
+                <dt>Learning</dt>
+                <dd>Postman &middot; GraphQL basics &middot; API testing</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>DevTools &middot; GitHub &middot; Jira &middot; Trello &middot; Notion &middot; Slack</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="availability">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <p>
+              <strong>Open to work</strong>
+              Junior QA, internships, and test collaborations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section section--approach" id="approach" aria-labelledby="approach-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="section-index">05 &mdash; How I work</p>
+          <h2 id="approach-title">Curious enough to break it. Careful enough to explain it.</h2>
+          <p class="section-lead">
+            My process is simple and repeatable &mdash; built for small teams that
+            need clarity more than ceremony.
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li data-reveal>
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3>Understand the flow</h3>
+            <p>
+              I start by using the product like a person would: finding the critical
+              path, the side doors, and the states the happy path ignores.
+            </p>
+          </li>
+          <li data-reveal style="--delay: 60ms">
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3>Test the edges</h3>
+            <p>
+              Different screen sizes, languages, inputs, empty states, and error
+              states. The bug is often one step outside the demo.
+            </p>
+          </li>
+          <li data-reveal style="--delay: 120ms">
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3>Document what matters</h3>
+            <p>
+              Steps to reproduce, expected vs. actual, severity, and evidence. No
+              vague &ldquo;it doesn&rsquo;t work&rdquo; tickets.
+            </p>
+          </li>
+          <li data-reveal style="--delay: 180ms">
+            <span class="step-num" aria-hidden="true">04</span>
+            <h3>Verify the fix</h3>
+            <p>
+              Re-test the original issue and the areas around it, so a fix
+              doesn&rsquo;t quietly create the next bug.
+            </p>
+          </li>
+        </ol>
+
+        <div class="skills" data-reveal>
+          <div class="skill-group">
+            <h3>Testing</h3>
+            <ul class="tag-list">
+              <li>Functional</li>
+              <li>Exploratory</li>
+              <li>Regression</li>
+              <li>Usability</li>
+              <li>Responsive</li>
+              <li>Localization</li>
+              <li>Search relevance</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Documentation</h3>
+            <ul class="tag-list">
+              <li>Bug reports</li>
+              <li>Test cases</li>
+              <li>Checklists</li>
+              <li>Severity &amp; priority</li>
+              <li>Reproduction steps</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Technical</h3>
+            <ul class="tag-list">
+              <li>Browser DevTools</li>
+              <li>Git &amp; GitHub</li>
+              <li>JSON &amp; YAML</li>
+              <li>HTML/CSS/JS</li>
+              <li class="tag-learning">Postman &middot; learning</li>
+              <li class="tag-learning">GraphQL basics &middot; learning</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="learning-note" data-reveal>
+          <span>Currently learning</span>
+          API testing with Postman, GraphQL basics, and how to read JSON/YAML
+          payloads &mdash; so I can test beyond the interface.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-grid">
+        <div data-reveal>
+          <p class="section-index section-index--light">06 &mdash; Contact</p>
+          <h2 id="contact-title">Have a product that needs a second pair of eyes?</h2>
+          <p class="contact-lead">
+            I&rsquo;m open to junior QA roles, internships, and freelance test passes.
+            If you want a careful tester who documents what they find, send me a note.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-lime" href="mailto:vp485454@gmail.com">
+              vp485454@gmail.com
+            </a>
+            <button class="btn btn-outline" type="button" data-copy-email>
+              Copy email
+            </button>
+          </div>
+          <p class="contact-status" role="status" aria-live="polite" data-copy-status></p>
+          <p class="contact-note">
+            Based in Lisbon &middot; Available remotely and locally
+          </p>
+        </div>
+
+        <ul class="contact-links" data-reveal style="--delay: 100ms">
+          <li>
+            <a href="https://github.com/BeknYTprogamador" target="_blank" rel="noopener">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-desc">Code and project history</span>
+              <span class="contact-link-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://portfolio-qa-testing.vercel.app/" target="_blank" rel="noopener">
+              <span class="contact-link-label">QA Portfolio</span>
+              <span class="contact-link-desc">Full reports and test cases</span>
+              <span class="contact-link-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bekn_yt/" target="_blank" rel="noopener">
+              <span class="contact-link-label">Instagram</span>
+              <span class="contact-link-desc">@bekn_yt</span>
+              <span class="contact-link-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>
+        &copy; <span data-year>2026</span> Vinícius da Silva Cardoso. Built with
+        plain HTML, CSS, and a little JavaScript.
+      </p>
+      <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+</body>
+</html>

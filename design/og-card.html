@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>Social card source — Vinícius Cardoso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f7f5ef;
+      --ink: #171a16;
+      --muted: #62685f;
+      --accent: #1e5b45;
+      --accent-ink: #103226;
+      --line: #ddd8cb;
+      --lime: #d8f07f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 1200px;
+      height: 630px;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Inter", sans-serif;
+    }
+
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(23, 26, 22, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 26, 22, 0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: linear-gradient(90deg, #000 20%, transparent 82%);
+    }
+
+    .panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 350px;
+      height: 630px;
+      overflow: hidden;
+      background: var(--accent-ink);
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      top: -150px;
+      left: -90px;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(216, 240, 127, 0.2), transparent 68%);
+    }
+
+    .panel-label {
+      position: absolute;
+      top: 44px;
+      left: 28px;
+      color: rgba(216, 240, 127, 0.72);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    .panel-mark {
+      position: absolute;
+      top: 64px;
+      left: 28px;
+      color: var(--lime);
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 46px;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .brand {
+      position: absolute;
+      top: 58px;
+      left: 68px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 56px;
+      height: 56px;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--ink);
+      color: var(--lime);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .brand-role {
+      margin-top: 5px;
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.13em;
+    }
+
+    .headline {
+      position: absolute;
+      top: 190px;
+      left: 68px;
+      width: 760px;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 88px;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 0.94;
+    }
+
+    .headline em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .subline {
+      position: absolute;
+      top: 386px;
+      left: 70px;
+      margin: 0;
+      color: var(--accent-ink);
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 27px;
+      font-style: italic;
+    }
+
+    .tags {
+      position: absolute;
+      top: 434px;
+      left: 70px;
+      margin: 0;
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.07em;
+    }
+
+    .foot {
+      position: absolute;
+      top: 566px;
+      left: 70px;
+      margin: 0;
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+    }
+
+    .ticket {
+      position: absolute;
+      top: 132px;
+      left: 898px;
+      width: 272px;
+      overflow: hidden;
+      border: 1px solid #c8c2b3;
+      border-radius: 12px;
+      background: #fffdf8;
+      box-shadow: 0 24px 44px -18px rgba(0, 0, 0, 0.55);
+    }
+
+    .ticket-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: var(--ink);
+      color: #aeb6a8;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .ticket-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--lime);
+    }
+
+    .ticket-status::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--lime);
+    }
+
+    .ticket-body {
+      padding: 18px 18px 16px;
+    }
+
+    .ticket-kicker {
+      margin: 0 0 7px;
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 7px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .ticket h2 {
+      margin: 0 0 10px;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 21px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .chips {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .chip {
+      padding: 2px 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 6px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .chip--amber {
+      border-color: #e4c99d;
+      background: #f5e5c9;
+      color: #7d4508;
+    }
+
+    .rows {
+      border-top: 1px solid var(--line);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 8px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .row dt {
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 6.5px;
+      letter-spacing: 0.06em;
+    }
+
+    .row dd {
+      margin: 0;
+      color: #414840;
+      font-size: 9px;
+      line-height: 1.4;
+    }
+
+    .ticket-link {
+      margin-top: 12px;
+      color: var(--accent);
+      font-size: 9px;
+      font-weight: 600;
+    }
+
+    .panel-foot {
+      position: absolute;
+      bottom: 44px;
+      left: 28px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #91a697;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 8.5px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .panel-foot::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--lime);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid" aria-hidden="true"></div>
+
+  <div class="brand">
+    <div class="brand-mark">VC</div>
+    <div>
+      <div class="brand-name">Vinícius Cardoso</div>
+      <div class="brand-role">MANUAL QA &middot; LISBON, PORTUGAL</div>
+    </div>
+  </div>
+
+  <div class="headline">I test the <em>details</em><br>people scroll past.</div>
+  <p class="subline">A builder&rsquo;s eye, a tester&rsquo;s habits.</p>
+  <p class="tags">FUNCTIONAL TESTING &nbsp;&middot;&nbsp; UI/UX CHECKS &nbsp;&middot;&nbsp; LOCALIZATION &nbsp;&middot;&nbsp; BUG REPORTS</p>
+  <p class="foot">MANUAL QA PORTFOLIO&nbsp; /&nbsp; 2026</p>
+
+  <div class="panel" aria-hidden="true">
+    <div class="panel-label">MANUAL QA // 2026</div>
+    <div class="panel-mark">QA</div>
+  </div>
+
+  <article class="ticket">
+    <div class="ticket-bar">
+      <span>QA-01</span>
+      <span class="ticket-status">Confirmed</span>
+    </div>
+    <div class="ticket-body">
+      <p class="ticket-kicker">Bug report &middot; Startup Portugal</p>
+      <h2>Language switch drops on search results</h2>
+      <div class="chips">
+        <span class="chip chip--amber">Medium</span>
+        <span class="chip">Localization</span>
+      </div>
+      <dl class="rows">
+        <div class="row">
+          <dt>STEPS</dt>
+          <dd>Set site to PT &rarr; search &ldquo;idade&rdquo;</dd>
+        </div>
+        <div class="row">
+          <dt>EXPECTED</dt>
+          <dd>Results stay in Portuguese</dd>
+        </div>
+        <div class="row">
+          <dt>ACTUAL</dt>
+          <dd>Header reverts to English</dd>
+        </div>
+        <div class="row">
+          <dt>IMPACT</dt>
+          <dd>Mixed-language results weaken trust</dd>
+        </div>
+      </dl>
+      <div class="ticket-link">Read the full report &nbsp;&rarr;</div>
+    </div>
+  </article>
+
+  <div class="panel-foot">Open to junior QA roles</div>
+</body>
+</html>
